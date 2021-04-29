@@ -1,4 +1,4 @@
-import streamlit as lt
+import streamlit as st
 import joblib
 
 model_lr = joblib.load('stroke_lr.pkl')
@@ -17,7 +17,7 @@ def stroke_prediction():
 
 	activities=['Decison Tree','Ada boost','Cat boost','Xgboost','Histgradient boost','Light gbm','Logistic regression','Knearest','Support vector machine']
 
-	option=st.slider.selectbox('Select the model for prediction',activities)
+	option=st.sidebar.selectbox('Select the model for prediction',activities)
 
 	gender =st.selectbox('Select the gender',('Male','Female'))
 
